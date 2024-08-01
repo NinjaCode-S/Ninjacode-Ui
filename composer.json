@@ -1,0 +1,33 @@
+{
+  "name": "ninjacode/ui",
+  "description": "Nothing",
+  "autoload": {
+    "psr-4": {
+      "Ninjacode\\UI\\": "src/"
+    },
+    "files": [
+      "src/Http/Helpers/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Andrew Kolev",
+      "email": "attar@jcubegroup.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "laravel/laravel": "^10.1",
+    "laravel/pint": "^1.11"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+          "Ninjacode\\UI\\Providers\\NinjaCodeUIServiceProvider"
+      ]
+    }
+  }
+}
