@@ -1,16 +1,11 @@
 @props([
 	"name" => '',
 	"value" => '',
-	"type" => 'string',
 	"label" => "",
-	"placeholder" => "",
 	"required" => false,
-	"btn" => false,
-	"inline" => false,
 	"variants" => [],
-	"id" => null,
+	"id" => generateId(),
 ])
-
 <div class="form-check form-switch">
   <input type="hidden" name="{{$name}}" value="0" data-fill="none">
   <input class="form-check-input"
