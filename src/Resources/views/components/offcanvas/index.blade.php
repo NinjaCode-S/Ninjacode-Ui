@@ -41,5 +41,5 @@
     <div class="offcanvas-body">
         {{ $slot }}
     </div>
-    <div class="offcanvas-footer" id="{{ $id }}Footer">{{ $footer }}</div>
+    <div class="offcanvas-footer" id="{{ $id }}Footer">{{ @$footer }}</div>
 </div>
