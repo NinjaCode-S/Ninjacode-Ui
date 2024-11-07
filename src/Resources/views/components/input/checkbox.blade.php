@@ -8,7 +8,7 @@
 	"btn" => false,
 	"inline" => false,
 	"variants" => [],
-	"id" => null,
+	"id" => generateId(6),
 ])
 
 <div class="form-check">
