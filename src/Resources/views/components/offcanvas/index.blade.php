@@ -11,6 +11,7 @@
   'height' => null,
   'headerBg' => 'white',
   'headerColor' => 'dark',
+  'class' => '',
 ])
 @php($btnAttributes = ['data-bs-toggle' => 'offcanvas', 'aria-controls' => $id, 'data-bs-target' => '#'.$id, 'role' => 'button'])
 @isset($button)
@@ -19,7 +20,7 @@
             :slot-content="$button"/>
 @endisset
 
-<div class="offcanvas offcanvas-{{ $pos }}" tabindex="-1" id="{{ $id }}" aria-labelledby="{{ $id }}Label"
+<div @class(['offcanvas', "offcanvas-{$pos}" => $pos, $class]) tabindex="-1" id="{{ $id }}" aria-labelledby="{{ $id }}Label"
         @style([
             'min-width: '. toPixels($minWidth) => $minWidth,
             'max-width: ' . toPixels($maxWidth) => $maxWidth,
