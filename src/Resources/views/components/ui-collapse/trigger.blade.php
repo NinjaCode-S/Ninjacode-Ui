@@ -8,7 +8,7 @@
 @if(@$button)
     <x-scoped-slot :data="['target' => $target, 'attributes' => $attr]" :slotContent="$button"/>
 @else
-    <x-btn type="button" data-bs-toggle="collapse" :attributes="$attr">
+    <x-ui-btn type="button" data-bs-toggle="collapse" :attributes="$attr">
         {{ $slot }}
-    </x-btn>
+    </x-ui-btn>
 @endif
