@@ -3,10 +3,10 @@
 ])
 
 @if(View::exists('components.input.' . strtolower($type)) || file_exists($global_components_path . 'input/'. strtolower($type) . '.blade.php'))
-  @php $componentName = 'input.' . strtolower($type); @endphp
+  @php $componentName = 'ui-input.' . strtolower($type); @endphp
   @php $notExists = false; @endphp
 @else
-  @php $componentName = 'input.text'; @endphp
+  @php $componentName = 'ui-input.text'; @endphp
   @php $notExists = true; @endphp
 @endif
 
