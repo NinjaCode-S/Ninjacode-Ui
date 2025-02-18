@@ -1,1 +1,1 @@
-<x-input type="text" attr-type="date" {{ $attributes }}/>
+<x-ui-input type="text" attr-type="date" {{ $attributes }}/>
