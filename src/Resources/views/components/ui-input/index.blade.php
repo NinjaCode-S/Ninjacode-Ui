@@ -15,7 +15,6 @@
     @endif
 
     @isset($componentName)
-      @dump($componentName)
       <x-dynamic-component :component="$componentName" :type="$type" {{$attributes}}>
         {{ $slot }}
       </x-dynamic-component>
