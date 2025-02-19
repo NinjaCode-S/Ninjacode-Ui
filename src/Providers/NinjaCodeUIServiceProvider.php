@@ -5,10 +5,10 @@ namespace Ninjacode\UI\Providers;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Ninjacode\UI\Components\NinjaUi;
+use Ninjacode\UI\Components\UiNinjaUi;
 use Ninjacode\UI\Components\ScopedSlot;
-use Ninjacode\UI\Components\Tabs;
-use Ninjacode\UI\Components\TabItem;
+use Ninjacode\UI\Components\UiTabs;
+use Ninjacode\UI\Components\UiTabItem;
 
 class NinjaCodeUIServiceProvider extends ServiceProvider
 {
