@@ -33,7 +33,7 @@ class NinjaCodeUIServiceProvider extends ServiceProvider
     {
         $this->loadViewComponentsAs(null , [
             UiNinjaUi::class,
-            UiScopedSlot::class,
+            ScopedSlot::class,
             UiTabs::class,
             UiTabItem::class,
         ]);
