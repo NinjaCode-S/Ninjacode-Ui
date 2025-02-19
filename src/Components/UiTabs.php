@@ -4,7 +4,7 @@ namespace Ninjacode\UI\Components;
 
 use Illuminate\View\Component;
 
-class Tabs extends Component
+class UiTabs extends Component
 {
   public string $id;
   public string $tabs;

@@ -32,10 +32,10 @@ class NinjaCodeUIServiceProvider extends ServiceProvider
     protected function registerComponents()
     {
         $this->loadViewComponentsAs(null , [
-            NinjaUi::class,
-            ScopedSlot::class,
-            Tabs::class,
-            TabItem::class,
+            UiNinjaUi::class,
+            UiScopedSlot::class,
+            UiTabs::class,
+            UiTabItem::class,
         ]);
         Blade::anonymousComponentPath(dirname(__DIR__) . '/Resources/views/components');
     }
