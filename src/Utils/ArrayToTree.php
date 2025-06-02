@@ -28,13 +28,18 @@ class ArrayToTree
     protected static function buildTree($grouped, $items, $options)
     {
         return $items->map(function ($item) use ($grouped, $options) {
-            $children = $grouped->get($item[$options['customID']], collect());
+            try {
+                $children = $grouped->get($item[$options['customID']], collect());
 
-            if ($children->isNotEmpty()) {
-                $item[$options['childrenProperty']] = self::buildTree($grouped, $children, $options);
+                if ($children->isNotEmpty()) {
+                    $item[$options['childrenProperty']] = self::buildTree($grouped, $children, $options);
+                }
+
+                return $item;
+            } catch (\Throwable $e) {
+                // Обработка ошибок, если необходимо
+                return null;
             }
-
-            return $item;
         });
     }
 }
