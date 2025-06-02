@@ -19,8 +19,8 @@
     @if(@$item)
         <x-scoped-slot :data="['id' => $idk, 'content' => @$citem['content'], 'horizontal' => $horizontal]" :slotContent="$item"/>
     @else
-        <x-collapse.item id="{{ $idk }}" @class([$class]) :horizontal="$horizontal">
+        <x-ui-collapse.item id="{{ $idk }}" @class([$class]) :horizontal="$horizontal">
             {!! @$citem['content'] !!}
-        </x-collapse.item>
+        </x-ui-collapse.item>
     @endif
 @endforeach

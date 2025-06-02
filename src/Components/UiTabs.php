@@ -4,7 +4,7 @@ namespace Ninjacode\UI\Components;
 
 use Illuminate\View\Component;
 
-class Tabs extends Component
+class UiTabs extends Component
 {
   public string $id;
   public string $tabs;
@@ -18,7 +18,7 @@ class Tabs extends Component
     $this->id = $this->tabs;
     $this->classes = $classes;
 
-    view()->composer('ui::components.tabs.item', function ($view) {
+    view()->composer('ui::components.ui-tabs.item', function ($view) {
       $view->with([
         'tabs' => $this->tabs,
         'active' => $this->active,
@@ -28,6 +28,6 @@ class Tabs extends Component
 
   public function render()
   {
-    return view('ui::components.tabs.index');
+    return view('ui::components.ui-tabs.index');
   }
 }

@@ -4,7 +4,7 @@ namespace Ninjacode\UI\Components;
 
 use Illuminate\View\Component;
 
-class TabItem extends Component
+class UiTabItem extends Component
 {
   public string $name;
 
@@ -15,6 +15,6 @@ class TabItem extends Component
 
   public function render()
   {
-    return view('ui::components.tabs.item');
+    return view('ui::components.ui-tabs.item');
   }
 }

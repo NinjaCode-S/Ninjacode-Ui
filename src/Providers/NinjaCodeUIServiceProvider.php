@@ -5,10 +5,10 @@ namespace Ninjacode\UI\Providers;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Ninjacode\UI\Components\NinjaUi;
+use Ninjacode\UI\Components\UiNinjaUi;
 use Ninjacode\UI\Components\ScopedSlot;
-use Ninjacode\UI\Components\Tabs;
-use Ninjacode\UI\Components\TabItem;
+use Ninjacode\UI\Components\UiTabs;
+use Ninjacode\UI\Components\UiTabItem;
 
 class NinjaCodeUIServiceProvider extends ServiceProvider
 {
@@ -32,10 +32,10 @@ class NinjaCodeUIServiceProvider extends ServiceProvider
     protected function registerComponents()
     {
         $this->loadViewComponentsAs(null , [
-            NinjaUi::class,
+            UiNinjaUi::class,
             ScopedSlot::class,
-            Tabs::class,
-            TabItem::class,
+            UiTabs::class,
+            UiTabItem::class,
         ]);
         Blade::anonymousComponentPath(dirname(__DIR__) . '/Resources/views/components');
     }

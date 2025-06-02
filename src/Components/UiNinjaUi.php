@@ -5,7 +5,7 @@ namespace Ninjacode\UI\Components;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\View;
 
-class NinjaUi extends Component
+class UiNinjaUi extends Component
 {
 
     public function __construct($framework = 'bootstrap')

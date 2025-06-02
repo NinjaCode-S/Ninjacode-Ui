@@ -6,7 +6,7 @@
 ])
 
 <div class="d-flex align-items-center">
-    <x-dynamic-component :component="'flag.'.$lang" :width="$width" {{ $attributes }}/>
+    <x-dynamic-component :component="'ui-flag.'.$lang" :width="$width" {{ $attributes }}/>
     @if($label)
         <div @class([$labelClass ?: 'ms-2 fs-5'])>{{ $label }}</div>
     @endif
