@@ -31,13 +31,34 @@ class NinjaCodeUIServiceProvider extends ServiceProvider
 
     protected function registerComponents()
     {
-        $this->loadViewComponentsAs(null , [
+        $components = [
             UiNinjaUi::class,
             ScopedSlot::class,
             UiTabs::class,
             UiTabItem::class,
-        ]);
+        ];
+
+        $this->loadViewComponentsAs('x', $components);
+        $this->loadViewComponentsAs('', $components);
+
         Blade::anonymousComponentPath(dirname(__DIR__) . '/Resources/views/components');
+        $this->registerAnonymousComponentsWithoutPrefix();
+    }
+
+    protected function registerAnonymousComponentsWithoutPrefix()
+    {
+        $componentPath = dirname(__DIR__) . '/Resources/views/components';
+
+        if (is_dir($componentPath)) {
+            $files = glob($componentPath . '/*.blade.php');
+
+            foreach ($files as $file) {
+                $componentName = basename($file, '.blade.php');
+
+                // Регистрируем компонент без префикса
+                Blade::component($componentName, 'ui::components.' . $componentName);
+            }
+        }
     }
 
     protected function registerDirectives()
